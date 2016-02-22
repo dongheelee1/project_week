@@ -8,4 +8,11 @@ class Recipes extends CI_Controller {
 		$this->load->model("Recipe");
 		$this->load->library("form_validation");
 	}
+	public function getRecipe()
+	{
+		
+	}
+
+
+}
 
