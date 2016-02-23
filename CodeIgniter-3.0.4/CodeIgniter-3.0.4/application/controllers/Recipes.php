@@ -38,5 +38,6 @@ class Recipes extends CI_Controller {
 	public function loadRecipe(){
 		$this->load->view('recipe_response', array("userinfo" =>$this->session->userdata('userinfo')));
 	}
+
 }
 
