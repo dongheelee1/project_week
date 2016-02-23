@@ -6,41 +6,17 @@
 	<script>
 		$(document).ready(function(){
 			$('#ingredients').submit(function(){
-				// $('.ingredients').each(function(index, element){
-				// 	arrIngredients.push($(element).val());
-				// });
+
 				$.post($(this).attr("action"),
 					$(this).serialize(),
 					function(data){
 						console.log(data);
 					},'json');
-				// var joinedIngredients = arrIngredients.join(",");
-				// var url = "http://food2fork.com/api/search?key=0f3c05d712303cacf72b6230c8f9e793&q="+ joinedIngredients;
-				// console.log(url);
- 			// 	url = url.replace(/\s/g,"%20");
- 			// 	console.log(url);
-				// $.get(url, function(data){
-				// 	console.log(data);
-				// });
-		
-			// 	var values = {};
-			// $inputs.each(function(){
-			// 	values[this.name] = $(this).val();
-			// });
-
-			// var userInput = values.city;
-   //      	var url = "http://food2fork.com/api/search?key=0f3c05d712303cacf72b6230c8f9e793&q=" + userInput
-			// $.get(url, function(data) {
-			// 	$("#city_name").html(data.name);
-			// 	temp = data.main.temp * (9/5) - 459.67;
-			// 	temp = parseFloat(temp).toFixed(2);
-			// 	$("#city_temp").html(temp);
-
-			// }, 'json');
-			// $("input[name=city]").val("");
-			 	//return false;
+			return false;
 
 			});
+			
+
 		});
 	</script>
 	<style>
@@ -61,7 +37,7 @@
 </head>
 <body>
 <h2>Welcome, <?=$userinfo['first_name']; ?> </h2>
-<form method="post" action="process" id="ingredients">
+<form method="post" action="/process" id="ingredients">
 	<div>
 		Ingredient 1:<input type="text" class="ingredients" name="ingredient_0" required><br>
 		Ingredient 2:<input type="text" class="ingredients" name="ingredient_1" ><br>
