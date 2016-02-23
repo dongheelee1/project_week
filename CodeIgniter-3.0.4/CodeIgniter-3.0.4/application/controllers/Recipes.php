@@ -37,9 +37,5 @@ class Recipes extends CI_Controller {
 			));
 	}
 
-	public function load_recipe_response()
-	{
-		
-	}
 }
 
