@@ -5,16 +5,16 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
-			// $('#ingredients').submit(function(){
-			// 	$.post($(this).attr("action"),
-			// 		$(this).serialize(),
-			// 		function(data){
-			// 		console.log(data);
+			$('#ingredients').submit(function(){
 
-			// 		},'json');
-			// return false;
+				$.post($(this).attr("action"),
+					$(this).serialize(),
+					function(data){
+						console.log(data);
+					},'json');
+			//return false;
 
-			// });
+			});
 			
 
 		});
@@ -36,7 +36,6 @@
 	</style>
 </head>
 <body>
-<div id="wrapper">
 <h2>Welcome, <?=$userinfo['first_name']; ?> </h2>
 <form method="post" action="/process" id="ingredients">
 	<div>
@@ -70,6 +69,5 @@
 	<form action="Logins/logout" method="post">
 		<input type="submit" value="Logout">
 	</form>
-</div>
 </body>
 </html>
