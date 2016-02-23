@@ -30,7 +30,16 @@ class Recipes extends CI_Controller {
 		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 0);
 		$data = curl_exec($ch);
 		curl_close($ch);
-		echo json_encode($data);
+		// echo json_encode($data);
+		$this->load->view('recipe_response', array(
+			"data" => $data,
+			"userinfo" => $this->session->userdata("userinfo")
+			));
+	}
+
+	public function load_recipe_response()
+	{
+		
 	}
 }
 
