@@ -16,21 +16,28 @@
 <body>
 <h2><?=$userinfo['first_name']; ?>, here are your recipes! </h2>
 <?php 
-	var_dump($data);
+	//var_dump($data);
 	$php_data = json_decode($data, true);
-	var_dump($php_data['count']);
+	//var_dump($php_data['count']);
 	$random_object = rand(0, $php_data['count']-1); //randomized object count
 
-	var_dump($php_data);
-	var_dump($php_data['recipes'][$random_object]);
+	//var_dump($php_data);
+	//var_dump($php_data['recipes'][$random_object])
 ?>
-<div id="wrapper">
-	<h1><?php echo $php_data['recipes'][$random_object]['title']?></h1>
-	<div>
-		<p>Click this image to get more deets!</p>
-		<a href="<?php echo $php_data['recipes'][$random_object]['source_url'] ?>"><img src="<?php echo $php_data['recipes'][$random_object]['image_url']?>"></a>
-	</div>
-</div>
+
+	<div id="wrapper">
+	 	<h1><?php echo $php_data['recipes'][$random_object]['title']?></h1>
+	 	<div>
+	 		<p>Click this image to get more deets!</p>
+	 		<form action='/recipes/redirectHome' method= 'post' class="form">
+	 			<p>Or click here to find more recipes! </p>
+	 			<input type='submit' value='Restart'>
+	 		</form>
+	 		<a href="<?php echo $php_data['recipes'][$random_object]['source_url'] ?>">
+	 		<img src="<?php echo $php_data['recipes'][$random_object]['image_url']?>"></a>
+	 	</div>
+	 </div
+
 
 </body>
 </html>

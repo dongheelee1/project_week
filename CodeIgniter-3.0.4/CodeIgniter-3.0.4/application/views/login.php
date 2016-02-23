@@ -12,7 +12,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
 	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-	
+
 	<style type="text/css">
 		.error{
 			color:red;
@@ -29,9 +29,10 @@
 		
 	</div>
 	<?php echo $errors; ?>
+	<div class="container-fluid">
 	<h2>What's in your Fridge?</h2>
 	<h4>Register</h4>
-	<form action='/Logins/register' method= 'post'>
+	<form action='/Logins/register' method= 'post' class="form">
 		<input type='hidden' name='action' value='register'><br>
 		First Name:<input type="text" name="first_name"> <br>
 		Last Name:<input type="text" name="last_name"> <br>
@@ -41,11 +42,12 @@
 		<input type='submit' value='register'>
 	</form>
 	<h4>Login</h4>
-	<form action='/Logins/userLogin' method= 'post'>
+	<form action='/Logins/userLogin' method= 'post' class="form">
 		<input type='hidden' name='action' value='login'>
 		Email:<input type="text" name="email"> <br>
 		Password:<input type="password" name="password"> <br>
 		<input type='submit' value='Log in'>
 	</form>
+	</div>
 </body>
 </html>
