@@ -12,7 +12,7 @@
 					function(data){
 						console.log(data);
 					},'json');
-			return false;
+			//return false;
 
 			});
 			
