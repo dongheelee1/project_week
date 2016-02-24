@@ -3,7 +3,7 @@
 <head>
 	<title>Survey Form</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="/assets/some_stuff.css">
+	<link rel="stylesheet" type="text/css" href="/assets/style.css">
 	<script>
 		$(document).ready(function(){
 			$('#ingredients').submit(function(){
@@ -26,11 +26,10 @@
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
 	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-	<link rel="stylesheet" type="text/css" href="style.css">
 	
 </head>
 <body>
+<div class="jumbotron">
 	<div class="container-fluid bg-1 text-center">
 		<h2>Welcome, <?=$userinfo['first_name']; ?> </h2>
 		<p>Please enter an ingredient that is in your refrigerator.</p>
@@ -66,5 +65,6 @@
 			<input type="submit" value="Logout" class="btn btn-primary">
 		</form>
 	</div>
+</div>
 </body>
 </html>
