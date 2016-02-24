@@ -24,7 +24,7 @@
 
 </head>
 <body>
-<h2><?=$userinfo['first_name']; ?>, here are your recipes! </h2>
+<h1 class="text-center"><?=$userinfo['first_name']; ?>, here are your recipes! </h1>
 <?php 
 	//var_dump($data);
 	$php_data = json_decode($data, true);
@@ -36,15 +36,15 @@
 ?>
 
 	<div id="wrapper">
-	 	<h1><?php echo $php_data['recipes'][$random_object]['title']?></h1>
+	 	<h3 class="text-center"><?php echo $php_data['recipes'][$random_object]['title']?></h3>
 	 	<div>
-	 		<p>Click this image to get more deets!</p>
+	 		<p class="text-center">Click this image to get more deets!</p>
 	 		<form action='/recipes/redirectHome' method= 'post'>
-	 			<p>Or click here to find more recipes! </p>
-	 			<input type='submit' value='Restart'>
+	 			<p class="text-center">Or click here to find more recipes! </p>
+	 			<input type='submit' value='Restart' class="btn btn-primary btn-inline-block">
 	 		</form>
 	 		<a href="<?php echo $php_data['recipes'][$random_object]['source_url'] ?>">
-	 		<img src="<?php echo $php_data['recipes'][$random_object]['image_url']?>"></a>
+	 		<img src="<?php echo $php_data['recipes'][$random_object]['image_url']?>" class="img-responsive" ></a>
 	 	</div>
 	 </div
 
