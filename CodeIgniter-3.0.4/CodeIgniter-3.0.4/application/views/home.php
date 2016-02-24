@@ -13,61 +13,57 @@
 						console.log(data);
 					},'json');
 			//return false;
-
 			});
-			
-
 		});
+
 	</script>
-	<style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-		*{
-			margin: 0px auto;
-			padding: 0px;
-		}
-		h2{
-			text-align: center;
-		}
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" 
+	integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-		form{
-			border:2px solid blue;
-			width: 60%;
-		}
-	</style>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
+	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
 </head>
 <body>
-<h2>Welcome, <?=$userinfo['first_name']; ?> </h2>
-<form method="post" action="/process" id="ingredients">
-	<div>
-		Ingredient 1:<input type="text" class="ingredients" name="ingredient_0" required><br>
-		Ingredient 2:<input type="text" class="ingredients" name="ingredient_1" ><br>
-		Ingredient 3:<input type="text" class="ingredients" name="ingredient_2" ><br>
-		Ingredient 4:<input type="text" class="ingredients" name="ingredient_3" ><br>
-		Ingredient 5:<input type="text" class="ingredients" name="ingredient_4" ><br>
+	<div class="container-fluid bg-1 text-center">
+		<h2>Welcome, <?=$userinfo['first_name']; ?> </h2>
+		<p>Please enter an ingredient that is in your refrigerator.</p>
+	
+			<form method="post" action="/process" id="ingredients">
+				<div class="form-group">
+					<label for="ingredient_label">Ingredient 1: </label>
+					<input type="text" class="ingredients" name="ingredient_0" required><br>
+				</div>
+				<div class="form-group">
+					<label for="ingredient_label">Ingredient 2: </label>
+					<input type="text" class="ingredients" name="ingredient_1" ><br>
+				</div>
+				<div class="form-group">
+					<label for="ingredient_label">Ingredient 3: </label>
+					<input type="text" class="ingredients" name="ingredient_2" ><br>
+				</div>
+				<div class="form-group">
+					<label for="ingredient_label">Ingredient 4: </label>
+					<input type="text" class="ingredients" name="ingredient_3" ><br>
+				</div>
+				<div class="form-group">
+					<label for="ingredient_label">Ingredient 5: </label>
+					<input type="text" class="ingredients" name="ingredient_4" ><br>
+				</div>
+				<div class="form-group">
+					<input type="submit" name="submit" class="btn btn-primary">
+				</div>
+			</form>
+	
+
+		<form action="Logins/logout" method="post">
+			<input type="submit" value="Logout" class="btn btn-primary">
+		</form>
 	</div>
-		<input type="submit" name="submit">
-</form>
-	<!-- <div>
-		food type:
-		<select name="cuisine">
-		<option value="French">French</option>
-		<option value="American">American</option>
-		<option value="Mexican">Mexican</option>
-		<option value="Chinese">Chinese</option>
-		<option value="Italian">Italian</option>
-		<option value="BBQ">BBQ</option>
-		<option value="Mediterranean">Mexican</option>
-		<option value="other">Other</option>
-		</select>
-	</div> -->
-
-	<!-- <div>
-		Comment:
-		<textarea name="comment" rows="10" cols="15"></textarea>
-	</div> -->
-
-	<form action="Logins/logout" method="post">
-		<input type="submit" value="Logout">
-	</form>
 </body>
 </html>
