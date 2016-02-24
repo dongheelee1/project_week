@@ -32,7 +32,7 @@
 			<input type="text" name="email" placeholder="Email"> <br>
 			<input type="password" name="password" placeholder="Password"> <br>
 			<input type="password" name="confirm_password" placeholder="Confirm Password"> <br>
-			<input type='submit' value='register'>
+			<input type='submit' value='Register'>
 		</form>
 		<h3><b>Login</b></h3>
 		<form action='/Logins/userLogin' method= 'post' class="form-horizontal">

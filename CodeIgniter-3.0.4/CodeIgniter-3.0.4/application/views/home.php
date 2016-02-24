@@ -29,7 +29,6 @@
 	
 </head>
 <body>
-<div class="jumbotron">
 	<div class="container-fluid bg-1 text-center">
 		<h2>Welcome, <?=$userinfo['first_name']; ?> </h2>
 		<p>Please enter an ingredient that is in your refrigerator.</p>
@@ -65,6 +64,5 @@
 			<input type="submit" value="Logout" class="btn btn-primary">
 		</form>
 	</div>
-</div>
 </body>
 </html>
