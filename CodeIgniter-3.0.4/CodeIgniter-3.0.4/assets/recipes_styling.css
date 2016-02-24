@@ -6,6 +6,7 @@
 		body{
 			max-width: 100%;
 			margin:0px auto;
+			display: block;
 		}
 
 		.jumbotron {
@@ -14,7 +15,7 @@
 		    width: 100%;
 		    height: 100%;
 		    background-size: cover;
-		    overflow: scroll;
+		    overflow: hidden;
 		    margin-bottom: 0;
 		    margin-top: 0;
 
