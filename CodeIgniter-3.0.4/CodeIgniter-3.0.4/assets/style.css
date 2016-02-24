@@ -1,8 +1,13 @@
-.jumbrotron {
+body {
     position: absolute;
     background: #000 url("kitchen_stuff.jpg") center center fixed;
     width: 100%;
     height: 100%;
     background-size: cover;
     overflow: hidden;
+}
+
+.container-fluid {
+	color:white;
+	margin-top:180px;
 }
