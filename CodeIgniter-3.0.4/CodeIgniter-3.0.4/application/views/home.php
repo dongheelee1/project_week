@@ -55,13 +55,13 @@
 					<input type="text" class="ingredients" name="ingredient_4" ><br>
 				</div>
 				<div class="form-group">
-					<input type="submit" name="submit" class="btn btn-primary">
+					<input type="submit" name="submit" class="btn">
 				</div>
 			</form>
 	
 
 		<form action="Logins/logout" method="post">
-			<input type="submit" value="Logout" class="btn btn-primary">
+			<input type="submit" value="Logout" class="btn">
 		</form>
 	</div>
 </body>
