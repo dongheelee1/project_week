@@ -27,6 +27,7 @@
 	<div class="jumbotron">
 		<h1 class="text-center" style="font-family:calibri; color:white;"><?=$userinfo['first_name']; ?>, hope you're hungry </h1>
 		<p class="text-center" style="font-family:calibri; color:white;">__________  *  ___________ </p>
+
 		<?php 
 			//var_dump($data);
 			$php_data = json_decode($data, true);
@@ -38,17 +39,19 @@
 		?>
 
 			<div id="wrapper">
+
 			 	<h5 class="text-center" style="font-family:calibri; color:white;"><i><?php echo $php_data['recipes'][$random_object]['title']?></i></h5>
 			 	<div>
 			 		<form action='/recipes/redirectHome' method= 'post'>
 			 			<p class="text-center" style="font-family:calibri; color:white;">Click the image for the recipe or click here to find more recipes! </p>
-			 			<input type='submit' value='Restart' class="btn btn-inline-block" id="restart" style="background-color: #9ba04d; color: white"><br>
+			 			<input type='submit' value='Restart' class="btn btn-inline-block" id="restart" style="background-color: #9ba04d; color: white;"><br>
+
 			 		</form>
 			 		<a href="<?php echo $php_data['recipes'][$random_object]['source_url'] ?>">
 			 		<img src="<?php echo $php_data['recipes'][$random_object]['image_url']?>" class="img-responsive" ></a>
 			 	</div>
 			 </div>
-	</div>
+			 </div>
 
 </body>
 </html>
