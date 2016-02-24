@@ -60,7 +60,7 @@
 			</form>
 	
 
-		<form action="Logins/logout" method="post">
+		<form action="/Logins/logout" method="post">
 			<input type="submit" value="Logout" class="btn">
 		</form>
 	</div>
