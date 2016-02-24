@@ -29,7 +29,7 @@
 	 	<h1><?php echo $php_data['recipes'][$random_object]['title']?></h1>
 	 	<div>
 	 		<p>Click this image to get more deets!</p>
-	 		<form action='/recipes/redirectHome' method= 'post' class="form">
+	 		<form action='/recipes/redirectHome' method= 'post'>
 	 			<p>Or click here to find more recipes! </p>
 	 			<input type='submit' value='Restart'>
 	 		</form>

@@ -1,0 +1,41 @@
+/*		*{
+			margin:0px auto;
+			padding: 0px;
+		}*/
+
+
+		.error{
+			color:red;
+		}
+		.success{
+			color:green;
+			
+		}
+		#registration{
+			width:400px;
+			padding: 15px;
+			display: block;
+			border: 3px solid black;
+			vertical-align: center;
+
+
+		}
+
+			#registration h3{ 
+				display: inline-block;
+				text-align: bottom;
+				vertical-align: center;
+				font-style: bold;
+				color:black;
+
+			}
+
+		.jumbotron {
+		    position: absolute;
+		    background: #000 url("kitchen_pic.jpg") center center fixed;
+		    width: 100%;
+		    height: 100%;
+		    background-size: cover;
+		    overflow: hidden;
+
+		}

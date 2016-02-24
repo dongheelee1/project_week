@@ -3,6 +3,7 @@
 <head>
 	<title>Survey Form</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/assets/some_stuff.css">
 	<script>
 		$(document).ready(function(){
 			$('#ingredients').submit(function(){

@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
 	<title>Login and Registration</title>
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
 	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -12,42 +12,36 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
 	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+	<link rel="stylesheet" type="text/css" href="/assets/some_stuff.css">
 
-	<style type="text/css">
-		.error{
-			color:red;
-		}
-		.success{
-			color:green;
-			
-		}
-
-	</style>
 </head>
 <body>
-	<div id="nav_bar">
-		
+
+		<?php echo $errors; ?>
+<div class="jumbotron">
+	<div class="container-fluid bg-1 text-center" id='registration' >
+	<div class="page-header">
+		<h2 class="text-center"><strong>What's in your Fridge?</strong> <br><small style="color:red">
+		<b>For the cook who is just out of ideas</b></small><b></h2>
+		</div>
+		<h3><b>Register</b></h3>
+		<form action='/Logins/register' method= 'post' class="form-inline">
+			<input type='hidden' name='action' value='register' ><br>
+			<input type="text" name="first_name" placeholder="First Name"> <br>
+			<input type="text" name="last_name" placeholder="Last Name"> <br>
+			<input type="text" name="email" placeholder="Email"> <br>
+			<input type="password" name="password" placeholder="Password"> <br>
+			<input type="password" name="confirm_password" placeholder="Confirm Password"> <br>
+			<input type='submit' value='register'>
+		</form>
+		<h3><b>Login</b></h3>
+		<form action='/Logins/userLogin' method= 'post' class="form-horizontal">
+			<input type='hidden' name='action' value='login'>
+			<input type="text" name="email" placeholder="Email"> <br>
+			<input type="password" name="password" placeholder="Password"> <br>
+			<input type='submit' value='Log in'>
+		</form>
 	</div>
-	<?php echo $errors; ?>
-	<div class="container-fluid">
-	<h2>What's in your Fridge?</h2>
-	<h4>Register</h4>
-	<form action='/Logins/register' method= 'post' class="form">
-		<input type='hidden' name='action' value='register'><br>
-		First Name:<input type="text" name="first_name"> <br>
-		Last Name:<input type="text" name="last_name"> <br>
-		Email Address:<input type="text" name="email"> <br>
-		Password:<input type="password" name="password"> <br>
-		Confirm Password:<input type="password" name="confirm_password"> <br>
-		<input type='submit' value='register'>
-	</form>
-	<h4>Login</h4>
-	<form action='/Logins/userLogin' method= 'post' class="form">
-		<input type='hidden' name='action' value='login'>
-		Email:<input type="text" name="email"> <br>
-		Password:<input type="password" name="password"> <br>
-		<input type='submit' value='Log in'>
-	</form>
 	</div>
 </body>
 </html>
