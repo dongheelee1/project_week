@@ -13,7 +13,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
 	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-	<link rel="stylesheet" type="text/css" href="/assets/some_stuff.css">
+	<link rel="stylesheet" type="text/css" href="/assets/recipes_styling.css">
 	<script>
 	$(document).ready(function(){
 		$('div .images').click(function(){
@@ -24,30 +24,31 @@
 
 </head>
 <body>
-<h1 class="text-center"><?=$userinfo['first_name']; ?>, here are your recipes! </h1>
-<?php 
-	//var_dump($data);
-	$php_data = json_decode($data, true);
-	//var_dump($php_data['count']);
-	$random_object = rand(0, $php_data['count']-1); //randomized object count
+	<div class="jumbotron">
+		<h1 class="text-center" style="font-family:calibri, color:white"><?=$userinfo['first_name']; ?>, hope you're hungry </h1>
+		<p class="text-center" style="font-family:calibri, color:white">__________  *  ___________ </p>
+		<?php 
+			//var_dump($data);
+			$php_data = json_decode($data, true);
+			//var_dump($php_data['count']);
+			$random_object = rand(0, $php_data['count']-1); //randomized object count
 
-	//var_dump($php_data);
-	//var_dump($php_data['recipes'][$random_object])
-?>
+			//var_dump($php_data);
+			//var_dump($php_data['recipes'][$random_object])
+		?>
 
-	<div id="wrapper">
-	 	<h3 class="text-center"><?php echo $php_data['recipes'][$random_object]['title']?></h3>
-	 	<div>
-	 		<p class="text-center">Click this image to get more deets!</p>
-	 		<form action='/recipes/redirectHome' method= 'post'>
-	 			<p class="text-center">Or click here to find more recipes! </p>
-	 			<input type='submit' value='Restart' class="btn btn-primary btn-inline-block">
-	 		</form>
-	 		<a href="<?php echo $php_data['recipes'][$random_object]['source_url'] ?>">
-	 		<img src="<?php echo $php_data['recipes'][$random_object]['image_url']?>" class="img-responsive" ></a>
-	 	</div>
-	 </div
-
+			<div id="wrapper">
+			 	<h5 class="text-center" style="font-family:calibri, color:white"><i><?php echo $php_data['recipes'][$random_object]['title']?></i></h5>
+			 	<div>
+			 		<form action='/recipes/redirectHome' method= 'post'>
+			 			<p class="text-center" style="font-family:calibri, color:white">Click the image for the recipe or click here to find more recipes! </p>
+			 			<input type='submit' value='Restart' class="btn btn-primary btn-inline-block" id="restart"><br>
+			 		</form>
+			 		<a href="<?php echo $php_data['recipes'][$random_object]['source_url'] ?>">
+			 		<img src="<?php echo $php_data['recipes'][$random_object]['image_url']?>" class="img-responsive" ></a>
+			 	</div>
+			 </div>
+	</div>
 
 </body>
 </html>
