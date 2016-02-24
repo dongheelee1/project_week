@@ -9,5 +9,22 @@ body {
 
 .container-fluid {
 	color:white;
-	margin-top:180px;
+	margin-top:130px;
+}
+
+.container-fluid h2{
+	font-size: 4em;
+}
+
+.container-fluid p{
+	font-size: 2em;
+}
+
+.container-fluid .form-group{
+	font-size: 1.2em;
+	font-weight: 200;
+}
+
+.ingredients {
+	color:black;
 }
