@@ -29,6 +29,9 @@
 	
 </head>
 <body>
+	<?php  if($this->session->flashdata('errors')) {
+		echo $this->session->flashdata('errors');
+		}?>
 	<div class="container-fluid bg-1 text-center">
 		<h2>Welcome, <?=$userinfo['first_name']; ?> </h2>
 		<p>Please enter an ingredient that is in your refrigerator.</p>

@@ -65,6 +65,13 @@ class Logins extends CI_Controller {
 		}
 	 }
 
+	 public function getErrors()
+	 {
+	 	$this->session->set_flashdata("errors", "<h3 class='text-center' style='font-family:calibri; color:red'>
+	 		No recipes found-you must be starving!</h3>");
+	 	$this->index();
+	 }
+
 	 	 public function logout()
 	 {
 	 	$this->session->unset_userdata("userinfo");

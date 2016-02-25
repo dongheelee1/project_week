@@ -31,9 +31,27 @@ class Recipes extends CI_Controller {
 		$data = curl_exec($ch);
 		curl_close($ch);
 
+		//var_dump($data);
+
+		$php_data = json_decode($data, true);
+		//var_dump($php_data['count']);
+		$random_object = rand(0, $php_data['count']-1); //randomized object count
+
+			//var_dump($php_data['recipes'][$random_object])
+
+
+	if($php_data['count'] > 0){
+
 		$this->session->set_userdata('data', $data);
 
 		redirect('/recipes/refresh');
+
+	}else{
+
+		redirect('/home');
+		
+
+	}
 
 	}
 	public function refresh()
