@@ -17,13 +17,13 @@
 </head>
 <body>
 
-		<?php echo $errors; ?>
 <div class="jumbotron">
 	<div class="container-fluid bg-1 text-center" id='registration' >
 	<div class="page-header">
 		<h2 class="text-center"><strong>What's in your Fridge?</strong> <br><small style="color:red">
 		<b>For the cook who is just out of ideas</b></small><b></h2>
 		</div>
+		<?php echo $errors; ?>
 		<h3><b>Register</b></h3>
 		<form action='/Logins/register' method= 'post' class="form-inline">
 			<input type='hidden' name='action' value='register' ><br>
