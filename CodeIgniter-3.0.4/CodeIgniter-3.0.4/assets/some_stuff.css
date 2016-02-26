@@ -32,7 +32,7 @@ body{
 	text-align: bottom;
 	vertical-align: center;
 	font-style: bold;
-	color:black;
+	color: black;
 }
 .jumbotron {
 	position: absolute;
@@ -42,4 +42,8 @@ body{
 	background-size: cover;
 	overflow: hidden;
 	margin-bottom: 0;
+}
+.btn {
+	background-color: red;
+	color: white;
 }
