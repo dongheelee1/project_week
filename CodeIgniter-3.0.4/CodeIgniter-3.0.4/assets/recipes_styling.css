@@ -21,10 +21,11 @@ h1 {
 #restart, img{
 	width: 45%;
 	height: 30%;
-	margin: 0 auto;
+	margin: 20px auto;
 	display: block;
 	text-align: center;
 }
 .img-responsive{
 	margin-bottom: 800px;
+	margin-top: 20px;
 }

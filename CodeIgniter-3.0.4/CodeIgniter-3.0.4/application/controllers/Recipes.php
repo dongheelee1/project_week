@@ -38,7 +38,6 @@ class Recipes extends CI_Controller {
 	}
 	public function refresh()
 	{
-
 		
 		$this->load->view('recipe_response', 
 			array("userinfo"=>$this->session->userdata('userinfo'), 'data'=>$this->session->userdata('data')));
@@ -48,6 +47,18 @@ class Recipes extends CI_Controller {
 	{
 		$this->load->view('home', array("userinfo"=>$this->session->userdata('userinfo')));
 	}
+
+	public function whyIsThisNecessary()
+	{
+		redirect('/recipes/resources');
+	}
+
+	public function resources()
+	{
+		$this->load->view('opening',
+			array("userinfo"=>$this->session->userdata('userinfo'), 'data'=>$this->session->userdata('data')));
+	}
+
 
 
 

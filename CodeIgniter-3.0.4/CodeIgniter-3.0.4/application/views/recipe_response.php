@@ -45,8 +45,19 @@
 			 		<form action='/recipes/redirectHome' method= 'post'>
 			 			<p class="text-center" style="font-family:calibri; color:white;">Click the image for the recipe.</p>
 			 			<input type='submit' value='Restart Search' class="btn btn-inline-block" id="restart" style="background-color: #9ba04d; color: white;"><br>
-
 			 		</form>
+
+					<form action='/resources' method='post'>
+						<p class='text-center' style="font-family:calibri; color:white">Need some help getting started? Check out our resource page!</p>
+						<input type='submit' value='Resources' class="btn btn-inline-block" id="restart" style="background-color: #9ba04d; color: white;" >
+			 		</form>
+
+			 		<form action='/reload' method='post'>
+						<p class='text-center' style="font-family:calibri; color:white">Click here to generate a new Recipe</p>
+						<input type='submit' value='Regenerate' class="btn btn-inline-block" id="restart" style=" background-color: #9ba04d; color: white;">
+			 		</form>
+
+
 			 		<a href="<?php echo $php_data['recipes'][$random_object]['source_url'] ?>">
 			 		<img src="<?php echo $php_data['recipes'][$random_object]['image_url']?>" class="img-responsive" ></a>
 			 	</div>
