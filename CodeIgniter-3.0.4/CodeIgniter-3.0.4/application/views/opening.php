@@ -47,7 +47,7 @@
 		</ul>
 		<form action='/' method='post'>
 			<p class='text-center' style="font-family:calibri; color:white">If you're ready, click here to go back to the recipe generator!</p>
-			<input type='submit' value='Get back to Recipe Generator' class="btn btn-inline-block" >
+			<input type='submit' value='Go back to Recipe Generator' class="btn btn-inline-block" >
 		</form>
 
 	</div>

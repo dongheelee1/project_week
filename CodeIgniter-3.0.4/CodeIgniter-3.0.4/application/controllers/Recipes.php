@@ -59,8 +59,5 @@ class Recipes extends CI_Controller {
 			array("userinfo"=>$this->session->userdata('userinfo'), 'data'=>$this->session->userdata('data')));
 	}
 
-
-
-
 }
 
