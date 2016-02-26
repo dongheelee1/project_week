@@ -54,11 +54,12 @@ h1 {
 #restart, img{
 	width: 45%;
 	height: 30%;
-	margin: 0 auto;
+	margin: 20px auto;
 	display: block;
 	text-align: center;
 }
 .img-responsive{
 	margin-bottom: 800px;
+	margin-top: 20px;
+
 }
->>>>>>> 9bcdf970924b9982ff62c4c23b5b469314d32b4b
